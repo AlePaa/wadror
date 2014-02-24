@@ -9,7 +9,9 @@ Ratebeer::Application.routes.draw do
 
   resources :beers
 
-  resources :breweries
+  resources :breweries do
+    post 'toggle_activity', on: :member
+  end
 
   resources :ratings, :only => [:index, :new, :create, :destroy]
 
@@ -23,5 +25,8 @@ Ratebeer::Application.routes.draw do
   post 'places', to:'places#search'
 
   root 'breweries#index'
-
+  
+  get 'brewerylist', to:'breweries#list'  
+  get 'ngbeerlist', to:'beers#nglist'
+  get 'beerlist', to:'beers#list'
 end

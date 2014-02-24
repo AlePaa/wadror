@@ -7,10 +7,14 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'rack-mini-profiler'
+
 group :production do
    gem 'pg'
    gem 'rails_12factor' 
 end
+
+gem 'jquery-turbolinks'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -22,7 +26,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -42,7 +46,7 @@ end
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
@@ -55,6 +59,13 @@ group :test do
   gem 'launchy'
   gem 'webmock'
   gem 'simplecov', require: false
+  gem 'selenium-webdriver' 
+  gem 'database_cleaner', '< 1.1.0'
+end
+
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
 end
 
 gem 'httparty'
