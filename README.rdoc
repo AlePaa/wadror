@@ -1,2 +1,0 @@
-
-[![Build Status](https://travis-ci.org/AlePaa/wadror.png)](https://travis-ci.org/AlePaa/wadror)
